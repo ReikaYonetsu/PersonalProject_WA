@@ -29,7 +29,12 @@ public class CartItem {
     private Product product;
 
 
+    @Setter
     private int quantity;
+
+
+    public CartItem(Long userId, Long productId, int quantity) {
+    }
 
 
 }

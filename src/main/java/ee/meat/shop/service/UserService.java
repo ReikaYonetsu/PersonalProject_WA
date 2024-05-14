@@ -23,5 +23,13 @@ public class UserService {
         // Before saving, you'd usually handle encoding the password
         return userRepository.save(user);
     }
+    public boolean validateUser(String username, String password) {
+        User user = userRepository.findByUsername(username);
+        if (user != null && user.getPassword().equals(password)) {
+            return true;
+        }
+        return false;
+    }
+
 
 }
